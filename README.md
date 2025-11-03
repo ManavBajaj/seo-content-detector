@@ -54,17 +54,17 @@ jupyter notebook notebooks/seo_pipeline.ipynb
 
 ## Key Decisions
 
-- **Libraries:** Chose pandas and BeautifulSoup (with lxml) for robust HTML parsing, textstat for readability, scikit-learn for feature engineering and classification.
-- **Parsing Approach:** Extracted main content using `<main>`, `<article>`, and `<p>` tags; handled malformed HTML gracefully.
-- **Similarity Threshold:** Cosine similarity above 0.80 identified near-duplicates with high reliability.
-- **Model:** Random Forest classifier selected for interpretability and feature ranking; rule-based classifier implemented for task requirements.
+- Libraries: Chose pandas and BeautifulSoup (with lxml) for robust HTML parsing, textstat for readability, scikit-learn for feature engineering and classification.
+- Parsing Approach: Extracted main content using `<main>`, `<article>`, and `<p>` tags; handled malformed HTML gracefully.
+- Similarity Threshold: Cosine similarity above 0.80 identified near-duplicates with high reliability.
+- Model: Random Forest classifier selected for interpretability and feature ranking; rule-based classifier implemented for task requirements.
 
 ## Results Summary
 
-- **Model performance:** High accuracy and F1 on quality labels; see notebook for metrics and confusion matrix.
-- **Near-duplicate pages:** See results in `data/duplicates.csv` and live via the app.
-- **Thin content pages:** Flagged in `data/features.csv` and session analysis table.
-- **Typical output:** 
+- Model performance: High accuracy and F1 on quality labels; see notebook for metrics and confusion matrix.
+- Near-duplicate pages: See results in `data/duplicates.csv` and live via the app.
+- Thin content pages: Flagged in `data/features.csv` and session analysis table.
+- Typical output: 
 
 | Quality | Word Count | Flesch Score | Thin Content | Duplicates |
 |----------|------------|--------------|---------------|-------------|
@@ -77,6 +77,7 @@ jupyter notebook notebooks/seo_pipeline.ipynb
 - Labeling rules are deterministic based on two features; results on subjective or noisy data may vary.
 - TF-IDF-based duplicate detection may miss semantic matches not reflected in keyword overlap.
 - Extraction may not recover full content on highly non-standard HTML pages.
+
 
 
 
