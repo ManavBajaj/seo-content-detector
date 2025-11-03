@@ -18,8 +18,7 @@ seo-content-detector/
 ├── notebooks/
 │   └── seo_pipeline.ipynb       # Main analysis notebook
 │
-├── streamlit_app/
-│   └── app.py                   # Interactive Streamlit app
+│── app.py                   # Interactive Streamlit app
 │
 ├── models/
 │   ├── quality_model.pkl        # Saved classifier
@@ -49,7 +48,8 @@ jupyter notebook notebooks/seo_pipeline.ipynb
 
 ## Deployed Streamlit App
 
-- [App URL](https://manavbajaj-seo-content-detector-streamlit-appapp-fyczzu.streamlit.app/)  
+https://manavbajaj-seo-content-detector-app-3q1keo.streamlit.app/
+
  
 
 ## Key Decisions
@@ -77,6 +77,7 @@ jupyter notebook notebooks/seo_pipeline.ipynb
 - Labeling rules are deterministic based on two features; results on subjective or noisy data may vary.
 - TF-IDF-based duplicate detection may miss semantic matches not reflected in keyword overlap.
 - Extraction may not recover full content on highly non-standard HTML pages.
+
 
 
 
