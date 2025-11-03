@@ -6,6 +6,8 @@ This repository provides a data science pipeline and interactive app for evaluat
 
 ## Directory Structure
 
+
+```bash
 seo-content-detector/
 ├── data/
 │   ├── data.csv                 # Provided dataset (URLs + HTML)
@@ -26,6 +28,7 @@ seo-content-detector/
 ├── requirements.txt
 ├── .gitignore
 └── README.md                    # Documentation
+
 
 
 ## Setup Instructions
@@ -74,5 +77,6 @@ jupyter notebook notebooks/seo_pipeline.ipynb
 - Labeling rules are deterministic based on two features; results on subjective or noisy data may vary.
 - TF-IDF-based duplicate detection may miss semantic matches not reflected in keyword overlap.
 - Extraction may not recover full content on highly non-standard HTML pages.
+
 
 
