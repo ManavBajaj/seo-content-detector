@@ -10,11 +10,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load features and models
-features_db = pd.read_csv("../data/features.csv")
+features_db = pd.read_csv("data/features.csv")
 existing_embeddings = np.array(features_db['embedding'].apply(eval).tolist())
 existing_urls = features_db['url'].tolist()
-quality_model = joblib.load("../models/quality_model.pkl")
-label_encoder = joblib.load("../models/label_encoder.pkl")
+quality_model = joblib.load("models/quality_model.pkl")
+label_encoder = joblib.load("models/label_encoder.pkl")
 corpus = features_db['top_keywords'].str.replace('|', ' ').tolist()
 vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
 vectorizer.fit(corpus)
